@@ -1,0 +1,213 @@
+/*=====================================================
+|-Contact Style                                     |
+=====================================================*/
+.contactStructure{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+span.alertSendForm{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #37ddbe;
+}
+
+p.alertSendForm{
+    font-size: 17px;
+    text-transform: capitalize;
+    color: #222;
+}
+
+.contactStructure .contactContainer{
+    position: relative;
+    width: 90%;
+    background: transparent;
+    padding: 40px;
+    margin: 20px auto;
+}
+
+.contactStructure .contactContainer .contactContent{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.contactStructure .contactContainer .contactContent .contactInformation,
+.contactStructure .contactContainer .contactContent form{
+    width: 50%;
+}
+
+/*==============================
+|-Information Styles            |
+===============================*/
+.contactStructure .contactContainer .contactContent .contactInformation{
+    padding-left: 10px;
+}
+
+.contactStructure .contactContainer .contactContent .contactInformation .fact{
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 16px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.contactStructure .contactContainer .contactContent .contactInformation .fact .icon{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contactStructure .contactContainer .contactContent .contactInformation .fact p{
+    color: #222;
+}
+
+/*==============================
+|-Form Styles            |
+===============================*/
+.contactStructure .contactContainer .contactContent form{
+    position: relative;
+    padding-left: 5%;
+}
+
+.contactStructure .contactContainer .contactContent form .inputContainer{
+    position: relative;
+    margin: 0 0 35px 0;
+    width: 100%;
+}
+
+.warningMessage{
+    display: block;
+    padding: 12px 20px;
+    background: rgba(241, 20, 0, .5);
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    border: 1px solid #f11400;
+}
+
+.contactStructure .contactContainer .contactContent form .inputContainer input[type="text"],
+.contactStructure .contactContainer .contactContent form .inputContainer textarea{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 300;
+    background: transparent;
+    resize: none;
+    color: #222;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contactStructure .contactContainer .contactContent form .inputContainer input[type="text"]::placeholder,
+.contactStructure .contactContainer .contactContent form .inputContainer textarea::placeholder{
+    color: #37ddbe;
+}
+
+.contactStructure .contactContainer .contactContent form .inputContainer textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.contactStructure .contactContainer .contactContent form a{
+    position: relative;
+    width: 100px;
+    border-radius: 15px;
+    float: right;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    background: #37ddbe;
+    transition: .3s all ease-in-out;
+    z-index: 1;
+}
+
+.contactStructure .contactContainer .contactContent form a:hover{
+    transform: scale(1.1);
+    font-size: 14px;
+}
+
+.contactStructure .contactContainer .contactContent form a::before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background:#37ddbe;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.contactStructure .contactContainer .contactContent form a:hover::before{
+    box-shadow: inset -4px -4px 20px 0 #37ddbe,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+@media screen and (max-width: 980px){
+    span.alertSendForm{
+        font-size: 40px;
+    }
+    
+    p.alertSendForm{
+        font-size: 17px;
+    }
+    .contactStructure .contactContainer{
+        top: 0px;
+    }
+
+    .contactStructure .contactContainer .contactContent .contactInformation,
+    .contactStructure .contactContainer .contactContent form{
+        width: 100%;
+    }
+
+    /*==============================
+    |-Information Styles            |
+    ===============================*/
+    .contactStructure .contactContainer .contactContent .contactInformation{
+        padding-left: 0;
+    }
+
+    /*==============================
+    |-Form Styles            |
+    ===============================*/
+    .contactStructure .contactContainer .contactContent form{
+        padding-left: 0;
+        top: 80px;
+    }
+}
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media screen and (max-width: 600px){
+    span.alertSendForm{
+        font-size: 20px;
+    }
+    
+    p.alertSendForm{
+        font-size: 17px;
+    }
+    /*==============================
+    |-Information Styles            |
+    ===============================*/
+    .contactStructure .contactContainer .contactContent .contactInformation .fact{
+        font-size: 12px;
+    }
+
+    .contactStructure .contactContainer .contactContent .contactInformation .fact .icon{
+        font-size: 16px;
+    }
+
+}

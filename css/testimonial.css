@@ -1,0 +1,97 @@
+/*=====================================================
+|-Testimonials Styles                                     |
+=====================================================*/
+.testimonialsStructure{
+    position: relative;
+    width: 100%;
+    height: auto;
+	margin-bottom: 100px;
+}
+
+.testimonialsStructure .testimonialContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.testimonialsStructure .testimonialContainer .singleTestimonial{
+    position: relative;
+    flex: 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;   
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    background: #f1f1f1;
+    transition: .5s all ease-in-out; 
+}
+
+.testimonialsStructure .testimonialContainer .singleTestimonial::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    transition: .5s all ease-in-out;
+    z-index: -1;
+}
+
+.testimonialsStructure .testimonialContainer .singleTestimonial:hover::before{
+    box-shadow: inset -4px -4px 20px 0 rgba(242, 242, 242, .5),
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+
+.testimonialsStructure .testimonialContainer .singleTestimonial:hover{
+    transform: translateY(-25px);
+}
+
+.testimonialsStructure .testimonialContainer .singleTestimonial img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.testimonialsStructure .testimonialContainer .singleTestimonial .testimonialName{
+    font-size: 25px;
+    color: #37ddbe;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.testimonialsStructure .testimonialContainer .singleTestimonial span{
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.testimonialsStructure .testimonialContainer .singleTestimonial .testimonialStars{
+    color: #37ddbe;
+    margin: 20px 0;
+}
+
+.testimonialsStructure .testimonialContainer .singleTestimonial p{
+    text-align: justify;
+    font-size: 17px;
+    color: #222;
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+@media screen and (max-width: 980px){
+    .testimonialsStructure .testimonialContainer .singleTestimonial{
+        flex: 90%;
+        max-width: 90%;
+        margin-bottom: 25px;
+    }
+
+    .testimonialsStructure .testimonialContainer .singleTestimonial:hover{
+        transform: translateY(-10px);
+    }
+}
+
+

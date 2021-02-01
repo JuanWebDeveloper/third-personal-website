@@ -1,0 +1,143 @@
+/*=====================================================
+|-Professional Goals Styles                                     |
+=====================================================*/
+.professionalGoalsStructure{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer{
+    position: relative;
+    display: grid;
+    width: 90%;
+    left: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals{
+    position: relative;
+    cursor: pointer;
+    background: #f1f1f1;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    margin: 15px;
+    transition: .5s all ease-in-out;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: #f1f1f1;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s all ease-in-out;
+    z-index: -1;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals:hover::before{
+    box-shadow: inset -4px -4px 20px 0 rgba(242, 242, 242, .5),
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals:hover{
+    transform: translateY(-10px);
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals:nth-child(2){
+    grid-row-start: span 2;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals:nth-child(4){
+    grid-row-start: span 2;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals:nth-child(5){
+    grid-row-start: span 2;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer img{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+    translate: (-50%, -50%);
+    transition: .5s all ease-in-out;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals .descriptionGoalsP{
+    position: absolute;
+    background:rgba(242, 242, 242, .5);
+    width: 90%;
+    height: 0;
+    border-radius: 15px;
+    top: 5%;
+    left: 5%;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals .descriptionGoalsP::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background:rgba(242, 242, 242, .5);
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s all ease-in-out;
+    z-index: -1;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals .descriptionGoalsP:hover::before{
+    box-shadow: inset -4px -4px 20px 0 rgba(242, 242, 242, .5),
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals .descriptionGoalsP h3{
+    position: relative;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    color:  #37ddbf;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals:hover .descriptionGoalsP{
+    height: 90%;
+}
+
+.professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals:hover img{
+    opacity: .3;
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+@media screen and (max-width: 980px){
+    .professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals{
+        grid-row-start: span 2;
+    }
+        
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media screen and (max-width: 600px){
+    .professionalGoalsStructure .professionalGoalsContainer .singleProfessionalGoals{
+        grid-column-start: span 5;
+    }
+
+}

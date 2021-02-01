@@ -1,0 +1,334 @@
+/*=====================================================
+|-About Styles                                     |
+=====================================================*/
+.aboutStructure{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.aboutStructure .containerAbout{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*==============================
+|-About Me Styles             |
+===============================*/
+.aboutStructure .containerAbout .aboutMe{
+    position: relative;
+    width: 45%;
+    height: 50%;
+}
+
+.aboutStructure .containerAbout .aboutMe h2{
+    font-size: 30px;
+    text-align: center;
+    color: #37ddbe;
+    text-transform: capitalize;
+}
+
+.aboutStructure .containerAbout .aboutMe p{
+    font-size: 20px;
+    text-align: justify;
+    color: #222;
+    padding: 20px 0;
+}
+
+.aboutStructure .containerAbout .aboutMe ul{
+    padding-top: 20px;
+}
+
+.aboutStructure .containerAbout .aboutMe ul li{
+    text-align: justify;
+    padding-bottom: 25px;
+}
+
+.aboutStructure .containerAbout .aboutMe ul li a{
+    font-size: 25px;
+    color: #222;
+    transition: all .5s ease-in-out;
+}
+
+.aboutStructure .containerAbout .aboutMe ul li a:hover{
+    color: #37ddbe;
+}
+
+.aboutStructure .containerAbout .aboutMe ul li a i{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+    line-height: 50px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    transition: all .5s ease-in-out;
+    z-index: 5;
+}
+
+.aboutStructure .containerAbout .aboutMe ul li:nth-child(2) a i{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.aboutStructure .containerAbout .aboutMe ul li a i:hover{
+    box-shadow: inset -4px -4px 20px 0 #fff,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+/*==============================
+|-My Hobbies Styles            |
+===============================*/
+.aboutStructure .containerAbout .hobbies{
+    position: relative;
+    width: 45%;
+}
+
+.aboutStructure .containerAbout .hobbies::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: calc(100% - 20px);
+    background: #37ddbe;
+    box-shadow: 0 1px 5px #37ddbe;
+    top: 0;
+    left: -5%;
+}
+
+.aboutStructure .containerAbout .hobbies::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #37ddbe;
+    background: radial-gradient(circle, transparent, #37ddbe);
+    box-shadow: 0 1px 5px #37ddbe;
+    border-radius: 50%;
+    bottom: 0;
+    left: calc(-5% + -9px);
+}
+
+.aboutStructure .containerAbout .hobbies h2{
+    font-size: 30px;
+    text-align: center;
+    color: #37ddbe;
+    text-transform: capitalize;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon{
+    cursor: pointer;
+    position: relative;
+    width: 23%;
+    height: 150px;
+    background: #37ddbe;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px 0;
+    transition: .5s all ease-in-out;
+    z-index: 1;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 50px #fff;
+    background: #37ddbe;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon:hover{
+    transform: scale(1.1);
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon span{
+    position: absolute;
+    font-size: 70px;
+    color: #fff;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: .5s all ease-in-out;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon:hover span{
+    font-size: 50px;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon:hover::before{
+    box-shadow: inset -4px -4px 20px 0 #37ddbe,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerDescriptionOfHobbies{
+    position: relative;
+    width: 70%;
+    height: 150px;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerDescriptionOfHobbies h2{
+    text-align: left;
+    padding-top: 10px;
+}
+
+.aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerDescriptionOfHobbies p{
+    font-size: 20px;
+    text-align: justify;
+    color: #222;
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+@media screen and (max-width:1199px){
+    /*==============================
+    |-My Hobbies Styles            |
+    ===============================*/
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv{
+        height: auto;
+    }
+
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon{
+       height: 170px;
+    }
+
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerDescriptionOfHobbies{
+        height: 170px;
+    }
+
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerDescriptionOfHobbies p{
+        font-size: 15px;
+    }
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+@media screen and (max-width: 980px){
+    /*==============================
+    |-About Me Styles             |
+    ===============================*/
+    .aboutStructure .containerAbout .aboutMe p{
+        font-size: 17px;
+    }
+
+    .aboutStructure .containerAbout .aboutMe ul li a{
+        font-size: 17px;
+    }
+
+    /*==============================
+    |-My Hobbies Styles            |
+    ===============================*/
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon{
+        height: 100px;
+        top: 30px;
+    }
+    
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon span{
+        font-size: 50px;
+    }
+    
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon:hover span{
+        font-size: 30px;
+    }
+
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerDescriptionOfHobbies p{
+        font-size: 15px;
+    }
+
+}
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media screen and (max-width: 600px){
+    /*==============================
+    |-About Me Styles             |
+    ===============================*/
+    .aboutStructure .containerAbout .aboutMe{
+        width: 90%;
+    }
+
+    .aboutStructure .containerAbout .aboutMe ul li a{
+        font-size: 20px;
+    }
+
+    /*==============================
+    |-My Hobbies Styles            |
+    ===============================*/
+    .aboutStructure .containerAbout .hobbies{
+        width: 90%;
+        padding-top: 20px;
+    }
+
+    .aboutStructure .containerAbout .hobbies::after{
+        width: 100%;
+        height: 2px;
+        background: #37ddbe;
+        box-shadow: 0 1px 5px #37ddbe;
+        left: 0;
+    }
+
+    .aboutStructure .containerAbout .hobbies::before{
+        display: none;
+    }
+
+    .aboutStructure .containerAbout .hobbies .containerHobbies{
+        height: auto;
+    }
+
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon{
+        width: 50%;
+        height: 150px;
+        top: 0;
+    }
+
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon span{
+        font-size: 80px;
+    }
+    
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerHobbiesIcon:hover span{
+        font-size: 60px;
+    }
+
+    .aboutStructure .containerAbout .hobbies .containerHobbies .containerDiv .containerDescriptionOfHobbies{
+        width: 90%;
+    }
+
+}
+

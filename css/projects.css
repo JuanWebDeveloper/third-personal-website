@@ -1,0 +1,133 @@
+/*=====================================================
+|-Projects Style                                       |
+=====================================================*/
+.projectsStructure{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+    z-index: 1;
+}
+
+.projectsStructure .projectArea{
+    position: relative;
+}
+
+.projectsStructure .projectArea .buttonGroup{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.projectsStructure .projectArea .buttonGroup button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 10px 50px;
+    text-transform: capitalize;
+    color: #222;
+    transition: .5s all linear;
+}
+
+.projectsStructure .projectArea .buttonGroup button.active{
+	padding: 5px 15px;
+    z-index: 10;
+    transform: translateY(-5px);
+    border-bottom: 2px solid #37ddbe;
+	color: #37ddbe !important;
+}
+
+.projectsStructure .projectArea .buttonGroup button:hover{
+	opacity: 1;
+    color: #37ddbe !important;
+    border-bottom: 2px solid #37ddbe;
+    transform: translateY(-5px);
+	transition: .5s all ease-in-out;
+}
+
+.projectsStructure .projectArea .buttonGroup button + button{
+    padding-left: 3rem;
+}
+
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active{
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.projectsStructure .projectArea .grid .our-project .title h4{
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #37ddbe;
+}
+
+.projectsStructure .projectArea .grid .our-project .img{
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, rgba(102, 102, 102, .9)  0%, rgba(55, 221, 190, .9) 90%);
+    overflow:hidden;
+    transition: .3s all ease-in-out;
+}
+
+.projectsStructure .projectArea .grid .our-project .img a:hover img{
+    transition: .3s all ease-in-out;
+	opacity: .5;
+    transform: scale(1.1,1.1);  
+}
+
+/*--=====================================================
+|-Diseño Responsive                                      |
+=======================================================--*/
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+@media screen and (max-width: 980px){
+    .projectsStructure .projectArea .buttonGroup button{
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .projectsStructure .projectArea .buttonGroup button.active{
+        padding: 10px 15px;
+    }
+
+}
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media screen and (max-width: 600px){
+    .projectsStructure .projectArea{
+        margin-top: 0px;
+    }
+    
+    .projectsStructure .projectArea .buttonGroup{
+        width: 100%;
+        display: block;
+    }
+    
+    .projectsStructure .projectArea .buttonGroup button{
+        display: block;
+        width: 90%;
+        padding: 10px 0px;
+        text-align: right;
+        margin-bottom: 30px;
+        margin-left: 5%;
+    }
+
+    .projectsStructure .projectArea .buttonGroup button:hover{
+        border-bottom: none;
+    }
+
+    .projectsStructure .projectArea .buttonGroup button.active{
+        text-align: right;
+        border-bottom: none;
+    }
+}
+

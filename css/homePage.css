@@ -1,0 +1,471 @@
+/*=====================================================
+|-Homepage Styles                                     |
+=====================================================*/
+.homePageStructure{
+    position: relative;
+    width: 100%;
+	height: 100vh;
+	margin-bottom: 50px;
+    z-index: 100;
+}
+
+.homePageStructure::after{
+	content: '';
+    position: absolute;
+    width: 50%;
+	height: 40%;
+	top: 10%;
+	left: 0;
+	background: url(../img/money/circles.png);
+	background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.homePageStructure::before{
+	content: '';
+    position: absolute;
+    width: 20%;
+	height: 40%;
+	top: 40%;
+	right: 0;
+	background: url(../img/money/circle.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/*==============================
+|-Navbar Styles            |
+===============================*/
+.homePageStructure .navbar{
+    position: fixed;
+    width: 100%;
+	height: 60px;
+	transition: .5s all ease-in-out;
+	z-index: 1000;
+}
+
+.navbarScroll{
+	height: 65px !important;
+	box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+	background:#fff;
+}
+
+.navbarScrollA{
+	color: #37ddbe !important;
+}
+
+.homePageStructure .navbar .logoContainer{
+	position: relative;
+	width: 80px;
+	top: -10px;
+	left: 5%;
+}
+
+.homePageStructure .navbar .navigation{
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	top: 10px;
+	right: 5%;
+}
+
+.homePageStructure .navbar .navigation ul{
+	display: flex;
+}
+
+.homePageStructure .navbar .bar{
+	display: none;
+}
+
+.homePageStructure .navbar .navigation ul li{
+	padding: 0 15px;
+	margin-bottom: 25px;
+}
+
+.homePageStructure .navbar .navigation ul li a{
+	display: block;
+	position: relative;
+	color: #222;
+	font-size: 1.25rem;
+	transition: .3s all ease-in-out;
+	z-index: 10;
+}
+
+.homePageStructure .navbar .navigation ul li a.active{
+	padding: 5px 15px;
+	transform: scale(1,1);
+	z-index: 10;
+	color: #fff !important;
+}
+
+.homePageStructure .navbar .navigation ul li a.active::before, .homePageStructure .navbar .navigation li a.active::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+	height: 50%;
+	background: #37ddbe;
+	border-radius: 5px;
+	box-shadow: inset -4px -4px 20px 0 #37ddbe,
+				inset 4px 4px 20px 0 rgba(0, 0, 0, .8);;
+	transition: .5s all ease-in-out;
+	opacity: 1;
+	z-index: -1;
+}
+
+.homePageStructure .navbar .navigation ul li a::before, .homePageStructure .navbar .navigation ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+	height: 50%;
+	background: #37ddbe;
+	box-shadow: inset -4px -4px 20px 0 #37ddbe,
+				inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+    transition: .5s all ease-in-out;
+	opacity: 0;
+	z-index: -1;
+}
+
+.homePageStructure .navbar .navigation ul li a::before{
+    top: 0;
+    left: 0;
+}
+
+.homePageStructure .navbar .navigation ul li a::after{
+    bottom: 0;
+    right: 0;
+}
+
+.homePageStructure .navbar .navigation ul li a:hover::before, .homePageStructure .navbar .navigation li a:hover::after{
+    opacity: .5;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: inset -4px -4px 20px 0 #37ddbe,
+				inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+    transition: .5s all ease-in-out;
+}
+
+.homePageStructure .navbar .navigation ul li a:hover{
+	opacity: 1;
+	color: #fff !important;
+	padding: 5px 15px;
+	transform: scale(1,1);
+	transition: .5s all ease-in-out;
+}
+
+/*==============================
+|-Presentation Styles          |
+===============================*/
+.homePageStructure .presentationContainer{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 70%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	top: 15%;
+}
+
+.homePageStructure .presentationContainer .presentation{
+	width: 45%;
+	height: 100%;
+}
+
+.homePageStructure .presentationContainer .presentation div{
+	position: relative;
+	width: 70%;
+	height: 80%;
+	left: 30%;
+	top: 10%;
+}
+
+.homePageStructure .presentationContainer .presentation div::before{
+	content: '';
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	bottom: 0;
+	border-radius: 50%;
+	z-index: 10;
+	background: radial-gradient(circle, transparent, #37ddbe);
+	border: 2px solid #37ddbe;
+}
+
+.homePageStructure .presentationContainer .presentation div::after{
+	content: '';
+	position: absolute;
+	height: calc(100% - 30px);
+	width: 2px;
+	top: 0;
+	left: 14px;
+	background: #37ddbe;
+}
+
+.homePageStructure .presentationContainer .presentation div h2{
+	position: relative;
+	font-size: 2.5rem;
+	color: #222;
+	padding-left: 30px;
+	top: 20%;
+	translate: (-50%, 0);
+}
+
+.homePageStructure .presentationContainer .presentation div p{
+	position: relative;
+	font-size: 1.875rem;
+	color: #37ddbe;
+	padding-left: 30px;
+	top: 20%;
+	translate: (-50%, 0);
+}
+
+.homePageStructure .presentationContainer .presentation div a{
+	position: relative;
+	border-radius: 15px;
+	font-size: 1rem;
+	padding: 15px 15px;
+	text-align: center;
+	color: #fff;
+	background: #37ddbe;
+	margin-left: 30px;
+	top: 23%;
+	translate: (-50%, 0);
+	transition: .3s all ease-in-out;
+	z-index: 1;
+}
+
+.homePageStructure .presentationContainer .presentation div a:hover{
+	transform: scale(1.1);
+	font-size: 14px;
+	box-shadow: inset -4px -4px 20px 0 #37ddbe,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+.homePageStructure .presentationContainer .personalPhoto{
+	position: relative;
+	cursor: pointer;
+	width: 45%;
+	height: 100%;
+	z-index: 1;
+}
+
+.homePageStructure .presentationContainer .personalPhoto::after{
+	content: '';
+	position: absolute;
+	width: 55%;
+	height: 90%;
+	top: 0;
+	left: 0;
+	background: #fff;
+	border-radius: 75px 75px 0px 0px;
+	box-shadow: 0px 0px 4px 5px rgba(0, 0, 0, 0.5);
+	z-index: -2;
+}
+
+.homePageStructure .presentationContainer .personalPhoto::before{
+	content: '';
+	position: absolute;
+	width: 55%;
+	height: 85%;
+	top: 5%;
+	left: 0;
+	background: url(../img/money/stripe.png);
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+
+.homePageStructure .presentationContainer .personalPhoto img{
+	position: relative;
+	top: 10%;
+	left: 2.5%;
+	border-radius: 15px;
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+@media screen and (max-width:1199px){
+	/*==============================
+	|-Navbar Styles            |
+	===============================*/
+	.homePageStructure .navbar .navigation{
+		right: 0;
+	}
+
+	.homePageStructure .navbar .navigation ul li{
+		padding: 0 10px;
+	}
+
+	/*==============================
+	|-Presentation Styles          |
+	===============================*/
+	.homePageStructure .presentationContainer .presentation div h2{
+		font-size: 1.875rem;
+	}
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+@media screen and (max-width: 980px){
+	/*==============================
+	|-Navbar Styles            |
+	===============================*/
+	.homePageStructure .navbar .bar{
+		display: block;
+		margin-top: -5px;
+		margin-right: 5%;
+	}
+
+	.homePageStructure .navbar .bar a{
+		font-size: 2.5rem;
+		color: #37ddbe;
+	}
+
+	.homePageStructure .navbar .logoContainer{
+		position: relative;
+		width: 80px;
+		margin-top: -15px;
+		left: 5%;
+	}
+
+	.homePageStructure .navbar .logoContainer{
+		top: 5px;
+	}
+
+	.homePageStructure .navbar .navigation{
+		position: absolute;
+		display: none;
+		width: 100%;
+		height: 100vh;
+		right: 0;
+		top: 60px;
+		background: #f2f2f2;
+	}
+
+	.homePageStructure .navbar .navigation::after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		top: 0;
+		left: 0;
+		background: #37ddbe;
+	}
+
+	.homePageStructure .navbar .navigation.appear{
+		display: block;
+	}
+
+	.homePageStructure .navbar .navigation ul{
+		display: flex;
+		width: 100%;
+		height: 90%;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.homePageStructure .navbar .navigation ul li{
+		padding: 0;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	.homePageStructure .navbar .navigation ul li a{
+		font-size: 1.563rem;
+		color: #37ddbe;
+	}
+
+	/*==============================
+	|-Presentation Styles          |
+	===============================*/
+	.homePageStructure .presentationContainer .presentation{
+		width: 100%;
+		height: 50%;
+	}
+	
+	.homePageStructure .presentationContainer .presentation div{
+		position: relative;
+		width: 90%;
+		left: 5%;
+	}
+
+	.homePageStructure .presentationContainer .presentation div::before{
+		display: none;
+	}
+	
+	.homePageStructure .presentationContainer .presentation div::after{
+		display: none;
+	}
+	
+	.homePageStructure .presentationContainer .presentation div h2{
+		text-align: center;
+		font-size: 1.375rem;
+		padding-left: 0;
+		top: 0;
+		translate: (0, 0);
+	}
+	
+	.homePageStructure .presentationContainer .presentation div p{
+		text-align: center;
+		font-size: 1.563rem;
+		padding-left: 0;
+		top: 0;
+		translate: (0, 0);
+	}
+
+	.homePageStructure .presentationContainer .presentation div a{
+		display: flex;
+		font-size: 1.25rem;
+		width: 200px;
+		margin: 0 auto;
+		top: 0;
+		justify-content: center;
+		translate: (0, 0);
+	}
+	
+	.homePageStructure .presentationContainer .personalPhoto{
+		width: 100%;
+		height: 50%;
+		top: 5%;
+	}
+
+	.homePageStructure .presentationContainer .personalPhoto img{
+		width: 30%;
+		left: 35%;
+		top: 0;
+	}
+
+	.homePageStructure .presentationContainer .personalPhoto::after{
+		width: 50%;
+		height: 80%;
+		top: 0;
+		left: 25%;
+	}
+
+	.homePageStructure .presentationContainer .personalPhoto::before{
+		width: 45%;
+		height: 70%;
+		top: 5%;
+		left: 30%;
+	}
+
+	
+}
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media screen and (max-width: 600px){
+	/*==============================
+	|-Presentation Styles          |
+	===============================*/
+	.homePageStructure::after{
+		display: none;
+	}
+
+	.homePageStructure::before{
+		display: none;
+	}
+}

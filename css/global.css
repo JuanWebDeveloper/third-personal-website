@@ -1,0 +1,191 @@
+/*=====================================================
+|-Global Styles                                       |
+=====================================================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    background: #fff;
+}
+
+a, a:hover, a::after, a::before, a:active, a:focus{
+    text-decoration: none;
+}
+
+h2::selection,
+h3::selection,
+p::selection,
+span::selection,
+a::selection,
+li::selection{
+    background: #999;
+    color: #fff;
+    text-shadow: none;
+    padding: 5px 4px;
+}
+
+/*==============================
+|-Global Titles styles         |
+===============================*/
+.globalTitles{
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #37ddbe;
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+}
+
+.globalTitles::after{
+    content: '❃';
+    position: absolute;
+    width: 10%;
+    height: 5px;
+    font-size: 30px;
+    line-height: 5px;
+    left: 45%;
+    bottom: 0;
+    color: #37ddbe;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(102, 102, 102, .5);
+}
+
+/*==============================
+|-Social Media styles          |
+===============================*/
+.socialMedia{
+    display: flex;
+	position: relative;
+	width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMedia a{
+    cursor: pointer;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+    transition: .3s all ease-in-out;
+}
+
+.socialMedia a:hover{
+    transform: scale(1.1);
+}
+
+.socialMedia a::before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.socialMedia a i{
+    position: absolute;
+    cursor: pointer;
+    font-size: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s all ease-in-out;
+}
+
+.socialMedia a:hover::before{
+    box-shadow: inset -4px -4px 20px 0 #fff,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+.socialMedia a:hover i{
+    font-size: 30px;
+}
+
+.socialMedia a:nth-child(1) i{
+    color: #3b5998;
+}
+
+.socialMedia a:nth-child(2) i{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.socialMedia a:nth-child(3) i{
+    color: #00acee;
+}
+
+.socialMedia a:nth-child(4) i{
+    color: #0e76a8;
+}
+
+.socialMedia a:nth-child(5) i{
+    color: #211F1F;
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+@media screen and (max-width: 980px){
+    /*==============================
+    |-Global Titles styles         |
+    ===============================*/
+    .globalTitles::after{
+        width: 30%;
+        left: 35%;
+    }
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media screen and (max-width: 600px){
+    /*==============================
+    |-Social Media styles          |
+    ===============================*/
+    .socialMedia a{
+        height: 50px;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .socialMedia a i{
+        font-size: 25px;
+    }
+    .socialMedia a:hover i{
+        font-size: 25px;
+    }
+
+    /*==============================
+    |-Global Titles styles         |
+    ===============================*/
+    .globalTitles{
+        font-size: 40px;
+    }
+
+    .globalTitles::after{
+        width: 60%;
+        left: 20%;
+    }
+}
