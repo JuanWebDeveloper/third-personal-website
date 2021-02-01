@@ -19,7 +19,7 @@ let quoteAlert = () => {
         confirmButtonColor: '#37ddbe',
         confirmButtonAriaLabel: 'Entendido',
     
-        imageUrl: 'https://vargaspg.github.io/JVwebDeveloper-/img/quotation.svg',
+        imageUrl: 'https://github.com/JuanWebDeveloper/third-personal-website/img/quotation.svg',
         imageWidth: '100%',
         imageHeight: '100px'
     

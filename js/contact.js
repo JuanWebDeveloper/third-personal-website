@@ -123,7 +123,7 @@ let validateForm = () => {
                 confirmButtonColor: '#37ddbe',
                 confirmButtonAriaLabel: 'Entendido',
 
-                imageUrl: 'https://vargaspg.github.io/JVwebDeveloper-/img/contact/mainSend.svg',
+                imageUrl: 'https://github.com/JuanWebDeveloper/third-personal-website/img/contact/mainSend.svg',
                 imageWidth: '100%',
                 imageHeight: '100px',
 
